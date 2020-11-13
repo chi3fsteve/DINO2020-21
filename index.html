@@ -1,10 +1,42 @@
-<html>
-    <body>
-        <p>Hello World</p>
+<!DOCTYPE html>
+<html lang="en">
 
-        <h1> List: </h1>
-        <p> s452483</p> 
-    ></body>
-    
-    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <title>The Git Manual™</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>The Git Manual™</h1>
+    <article>
+      <h2>git init</h2>
+      <div>
+        <p><i>git init creates an empty Git repository or reinitialises existing one.</i></p>
+        <p>
+          This command creates an empty Git repository - basically a .git directory with subdirectories for objects,
+          refs/heads, refs/tags, and template files. An initial <b>HEAD</b> file that references the <b>HEAD</b> of the master
+          branch is
+          also created.
+        </p>
+        If the <b>$GIT_DIR</b> environment variable is set then it specifies a path to use instead of ./.git for the base of
+        the repository.
+
+        If the object storage directory is specified via the <b>$GIT_OBJECT_DIRECTORY </b>environment variable then the sha1
+        directories are created underneath - otherwise the default <b>$GIT_DIR/objects </b>directory is used.
+
+        Running <b>git init</b> in an existing repository is safe. It will not overwrite things that are already there. The
+        primary reason for rerunning git init is to pick up newly added templates (or to move the repository to
+        another
+        place if --separate-git-dir is given).
+      </div>
+    </article>
+  </div>
+</body>
+
 </html>
+
