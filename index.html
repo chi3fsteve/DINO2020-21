@@ -1,14 +1,63 @@
-<html>
-    <body>
-        <p>Hello World</p>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <title>The Git Manual™</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>The Git Manual™</h1>
+    
         <h1> List: </h1>
-        <p> s452483</p>
+        <p> s452483</p> 
         <p> s452495 </p>
-        <p> gitk - A graphical browser for the git distributed version control system which allows you to quickly manage branches, and search/review commit logs and diffs.</br>
+    <article>
+         
+        <h1>git config --global color.ui true</h1>
+        <p>
+            Colors the git console, green for additions, red for deletions etc.
+        </p>
+        <p>
+            The default value is <code>git config --global color.ui auto</code>
+        </p>
+        <p>
+            In-depth explanation from the git config documentation:
+        </p>
+        <p>
+    color.ui: This variable determines the default value for variables such as color.diff and color.grep that control the use of color per command family. Its scope will expand as more commands learn configuration to set a default for the --color option. Set it to always if you want all output not intended for machine consumption to use color, to true or auto if you want such output to use color when written to the terminal, or to false or never if you prefer git commands not to use color unless enabled explicitly with some other configuration or the --color option.
+        </p>
+      <h2>git init</h2>
+      <div>
+        <p><i>git init creates an empty Git repository or reinitialises existing one.</i></p>
+        <p>
+          This command creates an empty Git repository - basically a .git directory with subdirectories for objects,
+          refs/heads, refs/tags, and template files. An initial <b>HEAD</b> file that references the <b>HEAD</b> of the master
+          branch is
+          also created.
+        </p>
+        If the <b>$GIT_DIR</b> environment variable is set then it specifies a path to use instead of ./.git for the base of
+        the repository.
+
+        If the object storage directory is specified via the <b>$GIT_OBJECT_DIRECTORY </b>environment variable then the sha1
+        directories are created underneath - otherwise the default <b>$GIT_DIR/objects </b>directory is used.
+
+        Running <b>git init</b> in an existing repository is safe. It will not overwrite things that are already there. The
+        primary reason for rerunning git init is to pick up newly added templates (or to move the repository to
+        another
+        place if --separate-git-dir is given).
+      </div>
+             <p> gitk - A graphical browser for the git distributed version control system which allows you to quickly manage branches, and search/review commit logs and diffs.</br>
             How to use: gitk [<options>] [<revision range>] [--] [<path>…​]
     gitk --all - Show all refs (branches, tags, etc.). </p>
-    ></body>
-    
-    
+      
+    </article>
+  </div>
+</body>
 </html>
+
