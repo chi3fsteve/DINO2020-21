@@ -1,0 +1,24 @@
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: orangered;
+  font-family: 'Inconsolata', monospace;
+  font-size: larger;
+}
+
+article h2{
+  margin-top: 2px solid orangered;
+}
+
+b{
+  color: red;
+}
+
+.container{
+  width: 80%;
+  margin: 2.5% 5%;
+  padding: 2.5% 5%;
+  background-color: papayawhip;
+}
+
