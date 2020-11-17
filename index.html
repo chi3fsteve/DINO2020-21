@@ -1,10 +1,105 @@
-<html>
-    <body>
-        <p>Hello World</p>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <title>The Git Manual™</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>The Git Manual™</h1>
+    
         <h1> List: </h1>
         <p> s452483</p> 
-    ></body>
-    
-    
+        <p> s452495 </p>
+		<p> s452487 </p>
+		<p> s442705 </p>
+    <article>
+        <div>
+			<h1>git config --global color.ui true</h1>
+			<p>
+				Colors the git console, green for additions, red for deletions etc.
+			</p>
+			<p>
+				The default value is <code>git config --global color.ui auto</code>
+			</p>
+			<p>
+				In-depth explanation from the git config documentation:
+			</p>
+			<p>
+		color.ui: This variable determines the default value for variables such as color.diff and color.grep that control the use of color per command family. Its scope will expand as more commands learn configuration to set a default for the --color option. Set it to always if you want all output not intended for machine consumption to use color, to true or auto if you want such output to use color when written to the terminal, or to false or never if you prefer git commands not to use color unless enabled explicitly with some other configuration or the --color option.	
+			</p>
+		</div>
+      <h2>git init</h2>
+		<div>
+        <p><i>git init creates an empty Git repository or reinitialises existing one.</i></p>
+        <p>
+          This command creates an empty Git repository - basically a .git directory with subdirectories for objects,
+          refs/heads, refs/tags, and template files. An initial <b>HEAD</b> file that references the <b>HEAD</b> of the master
+          branch is
+          also created.
+        </p>
+        If the <b>$GIT_DIR</b> environment variable is set then it specifies a path to use instead of ./.git for the base of
+        the repository.
+
+        If the object storage directory is specified via the <b>$GIT_OBJECT_DIRECTORY </b>environment variable then the sha1
+        directories are created underneath - otherwise the default <b>$GIT_DIR/objects </b>directory is used.
+
+        Running <b>git init</b> in an existing repository is safe. It will not overwrite things that are already there. The
+        primary reason for rerunning git init is to pick up newly added templates (or to move the repository to
+        another
+        place if --separate-git-dir is given).
+		</div>
+		<div>
+		<h2> gitk </h2>
+		
+             <p>A graphical browser for the git distributed version control system which allows you to quickly manage branches, and search/review commit logs and diffs.</br>
+            How to use: gitk [<options>] [<revision range>] [--] [<path>…​]
+    gitk --all - Show all refs (branches, tags, etc.). </p>
+		</div>
+		
+		<div>
+			<h2>git diff --staged &#60;commit&#62; </h2>
+			<p>
+			Shows changes staged for the next commit relative to the <b>&#60;commit&#62;</b>. Usually used with the latest commit <b>(HEAD)</b>, which is the default used when not provided with an argument. If <b>(HEAD)</b> does not exist and an argument isn't provided, the command shows all staged changes. This command serves the exact same function as <b>git diff --cached</b>
+			</p>
+			<p>
+			Example usage: <i>git diff --staged ec20107 </i>
+			</p>
+		</div>
+		<div>
+			<h2>git commit "filename"
+			</h2>
+			<p>
+			Create a new commit containing the current contents of the index and the given log message describing the changes. The new commit is a direct child of HEAD, usually the tip of the current branch, and the branch is updated to point to it (unless no branch is associated with the working tree, in which case HEAD is "detached".
+			</p>
+			<p>
+			Example usage:
+			</p>
+			<p>
+			<i>
+			$ git commit Makefile
+			</i>
+			</p>
+		</div>
+    </article>
+  </div>
+
+
+        <h1> List: </h1>
+        <p> s458895</p>
+        <p><h1>Description:</h1>git-clone - Clone a repository into a new directory<br>
+        Clones a repository into a newly created directory, creates remote-tracking branches for each branch in the cloned repository (visible using git branch --remotes), and creates and checks out an initial branch that is forked from the cloned repository’s currently active branch.<br>
+       
+        <br>
+        <h1>Exp:</h1>
+ git clone git://git.kernel.org/pub/scm/.../linux.git my-linux <br>
+git clone -l -s -n . ../copy</p>
+
+</body>
 </html>
