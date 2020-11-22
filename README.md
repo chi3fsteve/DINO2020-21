@@ -1,6 +1,9 @@
 DINO2020/21-E 
 Classes 4. Ex.2 Git manual
 
+PLEASE REMEMBER AND FEEL FREE TO CLEAN THE CODE - A PROPER CLEANING IS ALSO A VALID INPUT!
+(I AM LEAVING A MESS FOR YOU TO CLEAN UP ]:-)> )
+
 The task is to briefly describe key Git commands (as a group).
 
 Requirements:
